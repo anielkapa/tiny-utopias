@@ -10,17 +10,16 @@ import hyperkatoikia_konzept from "./hyperkatoikia_konzept.jpg";
 import modulus_bibliothek from "./modulus_bibliothek.jpg";
 import modulus_explosionsaxo from "./modulus_explosionsaxo.jpg";
 import modulus_innenhof from "./modulus_innenhof.jpg";
-import { Parallax, Background } from 'react-parallax';
 
 class Portfolio extends Component {
   constructor(props){
     super(props);
     this.state = {
         projects: [
-          {name: "frank", img: [frank_aussen, frank_spielplatz]},
-          {name: "hoch", img: [hoch]},
-          {name: "hyperkatoikia", img: [hyperkatoikia_aussen,hyperkatoikia_brucken ,hyperkatoikia_konzept ]},
-          {name: "modulus", img:[modulus_bibliothek, modulus_explosionsaxo, modulus_innenhof]}
+          {name: "frank", img: [frank_spielplatz,frank_aussen ]},
+          {name: "hyperkatoikia", img: [hyperkatoikia_brucken ,hyperkatoikia_aussen,hyperkatoikia_konzept ]},
+          {name: "modulus", img:[modulus_explosionsaxo, modulus_bibliothek,  modulus_innenhof]},
+          {name: "hoch", img: [modulus_innenhof]}
         ],
         active: [true, true, true, true]
     };
@@ -38,34 +37,24 @@ class Portfolio extends Component {
 
   createImages = () =>{
     let imageObjList = this.state.projects;
-    const insideStyles = {
-      background: "white",
-      padding: 20,
-      position: "absolute",
-      top: "50%",
-      left: "50%",
-      transform: "translate(-50%,-50%)"
-    };
     let imgList = imageObjList.map((element,index)=>{
+      let styles = {
+        root: {
+
+        }
+      };
       return(
-      <div key={index} className={this.state.active[index]? null : 'large'}>
-        <Parallax
-            bgImage={element.img[0]}
-            bgImageAlt={element.name}
-            blur={{ min: -1, max: 3 }}
-            strength={this.state.active[index]? 500 : 0}>
-            <div
-                onClick={e=>this.toggleClass(index)}
-                className={this.state.active[index] ? "img_container parallax": "img_enlarge"}>
-                <div
-                    style={insideStyles}
-                    className={this.state.active[index] ? "": "unvisible"}>
-                    {element.name}
+            <div key={index} className="imageContainer">
+                <div style = {{ backgroundImage: 'url(' + element.img[0] + ')',
+                                backgroundSize: 'cover',
+                                backgroundPosition: 'center center',
+                                backgroundRepeat: 'no-repeat',
+                                width: "75%",
+                                height: "80vh",
+                              }}  >
+
                 </div>
             </div>
-        </Parallax>
-        <h1 alt="space"> </h1>
-      </div>
     )
     });
     return imgList;
@@ -77,9 +66,12 @@ class Portfolio extends Component {
   }
   render(){
       return(
-        <div className="list container">
-          {this.createImages()}
-        </div>
+
+
+          <div className="listContainer">
+            {this.createImages()}
+          </div>
+
       );
     }
 

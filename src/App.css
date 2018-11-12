@@ -9,19 +9,15 @@
 
 
 .App-header {
-  margin: 40px 0 100px 0;
+  align-items: baseline;
   background-color: white;
-  min-height: 25vh;
+  min-height: 5vh;
   width: 100%;
   display: flex;
-  flex-direction: row;
-  align-items:stretch;
-  align-content: space-between;
-  justify-content:center;
-  font-size: calc(10px + 1vmin);
-  color: black;
-  font-family: 'Source Sans Pro', sans-serif;
-  font-weight: bold;
+  font-size: calc(20px + 1vmin);
+  font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif;
+  font-weight: 200;
+  color: grey;
 }
 
 .App-link {
@@ -37,37 +33,6 @@
   }
 }
 
-.img{
-  height:44vh;
-  width: 100%;
-}
-
-.img_container{
-  width: 55vw;
-  height: 55vw;
-
-}
-
-.large{
-  width:100vw;
-  height:100vh;
-}
-.unvisible{
-  display:none;
-}
-.parallax{
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-}
-
-.img_enlarge{
-  width: 99vw;
-  height: 99vh;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-}
 
 html{
   /*  background: url("./background.png") no-repeat center center fixed;
@@ -77,26 +42,76 @@ html{
     background-size: cover;*/
 
 }
+
+
+.title{
+  height: 50px;
+  width: 90vw;
+}
+.inside{
+  width: 5vw;
+  height: 50px;
+  font-weight: lighter;
+}
+/*containers*/
 section{
+  width: 100%;
+  height: 95vh;
   display:flex;
   justify-content: center;
   align-items: center;
   align-content: center;
 }
-
 .main{
   flex-direction: column;
-
 }
-.list{
-  flex-direction: row;
-  flex-wrap:wrap;
-}
-
 .container{
   display: flex;
-  justify-content: space-around;
-  width: 93vw;
-  height: 93vh;
+  width: 90vw;
+  height: 100vh;
   background: white;
+}
+.listContainer{
+  flex-direction: row;
+  flex-wrap:wrap;
+  display: flex;
+  width: 80%;
+  height: 90vh;
+}
+.imageContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 25%;
+  height: 100%;
+  -webkit-filter: invert(.8);
+  filter: invert(.8);
+}
+.imageContainer:hover{
+  filter: grayscale(0%);
+}
+
+/*hamburger icon*/
+#menu:hover{
+  cursor: pointer;
+}
+.mobileMenu{
+  width: 10vw;
+  position: fixed;
+  left:4vw;
+  top: 90px;
+  bottom:0;
+  height: 80vh;
+  z-index: 100002;
+  transition: margin ease .3s;
+  font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif;
+}
+ul{
+  list-style: none;
+  color:grey;
+  font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif;
+  font-size: 12px;
+  line-height: 200%;
+  text-align: left;
 }
