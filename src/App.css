@@ -1,0 +1,102 @@
+
+.App {
+  text-align: center;
+  display:flex;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+
+.App-header {
+  margin: 40px 0 100px 0;
+  background-color: white;
+  min-height: 25vh;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items:stretch;
+  align-content: space-between;
+  justify-content:center;
+  font-size: calc(10px + 1vmin);
+  color: black;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: bold;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.img{
+  height:44vh;
+  width: 100%;
+}
+
+.img_container{
+  width: 55vw;
+  height: 55vw;
+
+}
+
+.large{
+  width:100vw;
+  height:100vh;
+}
+.unvisible{
+  display:none;
+}
+.parallax{
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.img_enlarge{
+  width: 99vw;
+  height: 99vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+html{
+  /*  background: url("./background.png") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;*/
+
+}
+section{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.main{
+  flex-direction: column;
+
+}
+.list{
+  flex-direction: row;
+  flex-wrap:wrap;
+}
+
+.container{
+  display: flex;
+  justify-content: space-around;
+  width: 93vw;
+  height: 93vh;
+  background: white;
+}
