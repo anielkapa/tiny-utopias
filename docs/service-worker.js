@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.2/workbox-sw.js");
 
 importScripts(
-  "/tiny-utopias/precache-manifest.db8884db31e69ec8eabb9359ebaeb329.js"
+  "/tiny-utopias/precache-manifest.cd861b906f2b2d66679085f0d21f60cd.js"
 );
 
 workbox.clientsClaim();
